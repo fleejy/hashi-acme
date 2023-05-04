@@ -1,8 +1,8 @@
 ## Compute Network (VPC)
 resource "google_compute_network" "vpc_network" {
-  name = "compute-network"
+  name                    = "compute-network"
   auto_create_subnetworks = false
-  project = "hashi-acme"
+  project                 = "hashi-acme"
 }
 
 ## Compute Subnet (10.2.0.0/16)

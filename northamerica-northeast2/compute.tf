@@ -1,10 +1,10 @@
 ## Compute Disk
 resource "google_compute_disk" "default" {
-  name  = "test-disk"
-  type  = "pd-ssd"
+  name    = "test-disk"
+  type    = "pd-ssd"
   project = "hashi-acme"
-  zone  = "us-central1-c"
-  image = "debian-11-bullseye-v20220719"
+  zone    = "us-central1-c"
+  image   = "debian-11-bullseye-v20220719"
   labels = {
     environment = "prod"
   }
