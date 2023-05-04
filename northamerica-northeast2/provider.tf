@@ -7,13 +7,13 @@ terraform {
   }
 }
 
-variable "GCP_SECRET_ACCESS_KEY" {
+variable "GOOGLE_CREDENTIALS" {
     type = string
     sensitive = true
 }
 
 provider "google" {
-  credentials = var.GCP_SECRET_ACCESS_KEY
+  credentials = var.GOOGLE_CREDENTIALS
 
   project = "hashi-acme"
   region  = "us-central1"
