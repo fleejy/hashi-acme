@@ -12,11 +12,6 @@ resource "google_compute_disk" "default" {
 }
 
 ## Compute Instance
-resource "google_compute_attached_disk" "default" {
-  disk     = google_compute_disk.default.id
-  instance = google_compute_instance.default.id
-}
-
 resource "google_compute_instance" "default" {
   name         = "attached-disk-instance"
   machine_type = "e2-medium"
@@ -35,4 +30,9 @@ resource "google_compute_instance" "default" {
   lifecycle {
     ignore_changes = [attached_disk]
   }
+}
+
+resource "google_compute_attached_disk" "default" {
+  disk     = google_compute_disk.default.id
+  instance = google_compute_instance.default.id
 }
