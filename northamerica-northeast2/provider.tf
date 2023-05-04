@@ -7,11 +7,6 @@ terraform {
   }
 }
 
-variable "GOOGLE_CREDENTIALS" {
-    type = string
-    sensitive = true
-}
-
 provider "google" {
   credentials = var.GOOGLE_CREDENTIALS
 
