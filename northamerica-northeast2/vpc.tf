@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("/Users/fleejy/repos/hashi-acme-4e8871814407.json")
+  credentials = var.GCP_SECRET_ACCESS_KEY
 
   project = "hashi-acme"
   region  = "us-central1"
