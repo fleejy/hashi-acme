@@ -2,6 +2,7 @@
 resource "google_compute_disk" "default" {
   name  = "test-disk"
   type  = "pd-ssd"
+  project = "hashi-acme"
   zone  = "us-central1-c"
   image = "debian-11-bullseye-v20220719"
   labels = {

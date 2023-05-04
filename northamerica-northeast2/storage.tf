@@ -8,6 +8,7 @@ resource "google_sql_database" "database_deletion_policy" {
 ## Cloud SQL Instance
 resource "google_sql_database_instance" "instance" {
   name             = "my-database-instance"
+  project = "hashi-acme"
   region           = "us-central1"
   database_version = "POSTGRES_14"
   settings {
